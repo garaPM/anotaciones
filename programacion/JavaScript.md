@@ -138,6 +138,7 @@ Cuando solo se posea un solo parametro se puede sacar los parantesis
 const addNums = num1  => num1 + 5;
 console.log(addNums(5));
 ```
+
 ***
 **TIPS** `todos.forEach((todo) => console.log(todo));`, esto permitira imprimir todo lo que contenga el objeto **todos**.
 ***
@@ -340,7 +341,71 @@ console.log(compute(3));
 
 En este codigo existe un error ya que al no ingresar un punto y coma **javascript** lo ingresara solo al ver un salto de línea.
 
+* * *
 
+## 12. Spread Operators
+
+Los **spread operator** permiten ingresar una cantidad indeterminadas de parametros a una función sin necesidad de estar asignando variables, el funcionalidad ECMASCRIPT 6 al 8(ES2018)
+
+```js
+function multi(a,b,c) {
+	return a * b * c;
+}
+
+const numeros = [5,2,7,4];
+
+console.log(multi(...numeros));
+```
+Este código permite ingresar como argumentos una variable con multiples elementos sin necesidad de registrar los elementos individualmente, ya que el spread operator divide los elementos y en este caso solo seleccionara los 3 elementos que necesita la función para poder operar.
+
+```js
+let numeros = [1,2,3];
+let numeros2 = [...numeros];
+
+console.log(numeros2);
+
+numeros2.push(4);
+
+console.log(numeros);
+console.log(numeros2);
+```
+En este código permite observar que se puede clonar los elementos usando el spread operators en la línea 2, pero al clonarlo significa que se esta haciendo una copia independiente de la original en la cual se puede agregar o modificar sin afectar a la otra.
+
+```js
+let numeros = [1,2,3];
+let array = ["a", "b", "c",...numeros];
+// let array = [...numeros,"a", "b", "c"];
+
+console.log(array);
+```
+Se puede asignar a una lista como parte de la misma y agregara los elementos del array *numeros*
+
+```js
+let numeros = [1,2,3];
+let numeros2 = [4,5,6];
+let resultado = [...numeros, ...numeros2];
+
+console.log(resultado);
+```
+Este código permite agregar el listado de las variables numeros, numeros2 y con ello agruparlos a la variable resultado que tendria los datos de los dos array(listas)
+
+Ahora con ECMASCRIPT9(ES2018) se puede clonar objetos
+
+```js
+let persona = { nombre: "Gonzalo", edad: 34 };
+let persona2 = { ...persona };
+
+console.log(persona2);
+
+persona2.frontend = false;
+
+console.log(persona);
+console.log(persona2);
+```
+
+Con ello al igual que al modificar array se puede clonar sin modificar el objeto original
+
+ver [video](https://youtu.be/uRI5yV9tG60?t=180)
 
 * * *
 este cod
