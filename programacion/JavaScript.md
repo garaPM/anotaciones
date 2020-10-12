@@ -407,6 +407,22 @@ Con ello al igual que al modificar array se puede clonar sin modificar el objeto
 
 ver [video](https://youtu.be/uRI5yV9tG60?t=180)
 
+## 13. Snippets
+
+Snippet para convertir un frase en una URL, transformar texto a slug.
+```js
+const slugify = str =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+Ejemplo:
+slugify('Hello World!'); // 'hello-world'
+```
+
 * * *
 este cod
 

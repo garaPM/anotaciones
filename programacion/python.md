@@ -1,9 +1,89 @@
 # python
 
+[Curso HCanalesMX](https://www.twitch.tv/videos/751871964?t=0h29m51s)
 
-## 1. Tips
+## 1. Variables
 
-### 1.1. Sumar el ultimo registro de una lista
+es una locación de memoria el cual es dar un nombre a un espacio de memoria.
+
+- int
+- float
+- Dict (Diccionario)
+- Boolean (Boleanos)
+- List (Listas) []
+- Tuples (Tuplas)
+
+### 1.1. Listas
+
+```py
+n = [1,2,3,4]
+for n in g:
+   print(n)
+```
+
+### 1.2. Diccionario
+
+hh = { "key1": "value1", "key2": "value2" }
+for key, value in hh.items():
+print(key, value)
+>>> ('key2', 'value2')
+>>> ('key1', 'value1')
+
+### 1.3. Tuplas
+
+No se puede modificar
+
+### 1.4. Set Conjuntos
+
+
+
+
+
+### 1.5. Asignacion(=) vs comparacion(==)
+
+El = sirve para asignar vairables en cambio == sirve para comparar las variables
+
+## 2. bucles 
+
+### 2.1. For
+
+```py
+ll = [1,2,3,4,5,6,7,8,9]
+
+for idx in ll:
+    print(idx)
+```
+
+```py
+ff = 5
+ll = [1,2,3,4,5,6,7,8,9,10]
+
+for idx in ll:
+	print(5 * ll)
+```
+
+```py
+hh = [{"nombre": "Gonzalo", "apellido": "Ruiz"}, {"nombre": "jose", "apellido": "Perez"}]
+
+for idx in hh:
+	print(idx["nombre"])
+```
+
+```py
+hh = [{"nombre": "Gonzalo", "apellido": "Ruiz"}, {"nombre": "jose", "apellido": "Perez"}]
+
+for idx in hh:
+	print(idx["nombre"])
+
+for idx in hh:
+	print(idx["apellido"])
+```
+
+
+
+## 3. Tips
+
+### 3.1. Sumar el ultimo registro de una lista
 En el siguiente permite sumar el ultima registro de la lista es decir `2+2=4` ya que `lst[-1](2) += lst.pop()(2)`
 
 ```py
@@ -12,7 +92,7 @@ lst[-1] += lst.pop()
 lst
 >>> [0, 4]
 ```
-### 1.2. Unir dos lista con itertools
+### 3.2. Unir dos lista con itertools
 En este truco permite que dos lista se unan y se transforme en una lista con dos tuplas a través del módulo **itertools** con el método *zip_longest*, comos se puede ver en el ejemplo
 
 ```py
@@ -22,7 +102,7 @@ list(zip_longest(x,y))
 >>> [(1, 3), (2, None)]
 ```
 
-### 1.3. Usar * para imprimir más separador
+### 3.3. Usar * para imprimir más separador
 
 Con el * antes del nombres la variable extraer el contenido de la lista y unir el contenido de un a traves  separandolo en espacios y dando un resultado string o texto unido. con el comando **sep** permite definir el separador del resultado.
 
@@ -39,7 +119,7 @@ print(*numeros, sep="-")
 >>> 1-2-3-4-5
 ```
 
-### 1.4. usar divmod para separar años y meses
+### 3.4. usar divmod para separar años y meses
 
 Con la función **divmod** permite convertir los meses en años y meses respectivos.
 
@@ -52,7 +132,7 @@ divmod(55,12)
 >>> (4, 7) # 4 años y 7 meses
 ```
 
-### 1.5. Crear un archivo zip
+### 3.5. Crear un archivo zip
 
 Con esto permite crear un archivo zip y comprimir los archivos data.csv y test.log.
 
@@ -63,7 +143,7 @@ with ZipFile('my.zip','w') as zip_ref:
     zip_ref.write('test.log')
 ```
 
-### 1.6. Formas de mostrar un resultado en REPL
+### 3.6. Formas de mostrar un resultado en REPL
 
 En dos líneas
 ```py

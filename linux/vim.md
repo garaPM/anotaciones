@@ -390,3 +390,7 @@ Si queremos que esa abreviatura este siempre activa, simplemente escribiremos es
 
 **Recursos**
 [** Carla Schrode - Linux.com.**](https://www.linux.com/learn/intro-to-linux/2017/3/vim-shortcuts-and-text-searches)
+
+### 18.6. Usando % para moverse
+
+Usando el **%** permitira moverse entre los (`{}, [], ()`) en el código 
